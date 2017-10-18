@@ -1,0 +1,12 @@
+python -m nmt  --src=en --tgt=ch \
+    --vocab_prefix  nmt_data/vocab \
+    --train_prefix  nmt_data/train \
+    --dev_prefix  nmt_data/dev  \
+    --test_prefix  nmt_data/test \
+    --out_dir  nmt_model \
+    --num_train_steps 12000 \
+    --steps_per_stats 100 \
+    --num_layers 2 \
+    --num_units 256 \
+    --dropout 0.2 \
+    --metrics bleu
